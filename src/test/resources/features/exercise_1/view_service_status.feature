@@ -12,6 +12,7 @@ Feature: View service status
       | District |
 
   @current
+  @pending
   Scenario: Should see the list of available services for a future date
     Given Trevor is in the "Status updates" section
     When he consults the line statuses for "This Weekend"

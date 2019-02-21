@@ -15,9 +15,7 @@ The [view_service_status.feature](src/test/resources/features/exercise_1/view_se
 The first, "Should see the list of available services in the status updates section", has been implemented. 
 This exercise involves implementing the second: "Should see the list of available services for a future date".
 
-#### Step 1
-
-
+#### Step 1 - Implement the missing steps
 
 
 
