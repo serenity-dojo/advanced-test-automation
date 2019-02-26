@@ -36,9 +36,11 @@ configurations.all {
 dependencies {
     compile libs.logback
 
+    testCompile(libs.test.serenity.core) {
+        exclude group: "io.cucumber", module:"cucumber-core"
+    }
     testCompile libs.test.cucumber.java,
             libs.test.cucumber.junit,
-            libs.test.serenity.core,
             libs.test.serenity.screenplay,
             libs.test.serenity.junit,
             libs.test.serenity.screenplayWebdriver,
