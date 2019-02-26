@@ -204,7 +204,7 @@ public class PlanAJourney extends UIInteractionSteps {
         $(SUGGESTED_STOPS).click();
         
         $(PLAN_MY_JOURNEY).click();
-        waitForRenderedElements(JOURNEY_RESULTS);
+        withTimeoutOf(WAIT_FOR_RESULTS_TIMEOUT).waitFor(JOURNEY_RESULTS);
     }
 }
 ```
@@ -224,7 +224,7 @@ public class PlanAJourney extends UIInteractionSteps {
     public void to(String destination) {
         selectStation(TO, destination);
         $(PLAN_MY_JOURNEY).click();
-        waitForRenderedElements(JOURNEY_RESULTS);
+        withTimeoutOf(WAIT_FOR_RESULTS_TIMEOUT).waitFor(JOURNEY_RESULTS);
     }
 
     private void selectStation(By stationField, String station) {
@@ -357,6 +357,20 @@ class TravelPreferenceOptions {
 ```
 
 This scenario should now run.
+
+### Exercise 4
+
+Add a scenario where the user specifies a different daparture date:
+
+```gherkin
+  Scenario: Should be able to specify a different departure time
+    Given Trevor is in the "Plan a journey" section
+    And Trevor wants to leave "Tomorrow"
+    When he views trips between "London Bridge" and "Canary Wharf"
+    Then he should see a journey option for "Jubilee line to Canary Wharf"
+```
+
+
 
 ## Part 2 - The Screenplay Pattern
 

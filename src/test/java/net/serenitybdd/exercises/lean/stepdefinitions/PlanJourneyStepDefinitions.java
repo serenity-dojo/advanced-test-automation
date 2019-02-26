@@ -1,5 +1,6 @@
 package net.serenitybdd.exercises.lean.stepdefinitions;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -37,5 +38,10 @@ public class PlanJourneyStepDefinitions {
     @Then("he should see a journey option for {string}")
     public void he_should_see_a_journey_option_for(String journeyDescription) {
         assertThat(journeyResults.stops()).contains(journeyDescription);
+    }
+
+    @And("Trevor wants to leave {string}")
+    public void trevorWantsToLeave(String leaveDate) {
+        planAJourney.leavingOn(leaveDate);
     }
 }
