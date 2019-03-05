@@ -1,4 +1,4 @@
-package net.serenitybdd.exercises.lean.statusupdates;
+package net.serenitybdd.exercises.screenplay.statusupdates;
 
 public enum StatusUpdatesTimeframe {
     UPDATES_FOR_NOW,

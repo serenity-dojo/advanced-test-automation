@@ -1,4 +1,4 @@
-package net.serenitybdd.exercises.lean.planjourney;
+package net.serenitybdd.exercises.screenplay.planjourney;
 
 import org.openqa.selenium.By;
 

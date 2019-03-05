@@ -1,4 +1,4 @@
-package net.serenitybdd.exercises.lean.lines;
+package net.serenitybdd.exercises.screenplay.lines;
 
 import org.openqa.selenium.By;
 

@@ -1,4 +1,4 @@
-package net.serenitybdd.exercises.lean.acceptancetests;
+package net.serenitybdd.exercises.screenplay.acceptancetests;
 
 import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
@@ -8,6 +8,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "classpath:features/exercise_1/view_service_status.feature",
         plugin = {"pretty"},
-        glue = "net.serenitybdd.exercises.lean.stepdefinitions"
+        glue = "net.serenitybdd.exercises.screenplay.stepdefinitions"
 )
 public class ViewServiceStatus {}
