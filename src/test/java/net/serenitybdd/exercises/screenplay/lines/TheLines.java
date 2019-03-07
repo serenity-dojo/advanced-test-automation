@@ -2,6 +2,7 @@ package net.serenitybdd.exercises.screenplay.lines;
 
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.TextContent;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
