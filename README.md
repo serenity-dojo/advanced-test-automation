@@ -1,6 +1,6 @@
 # Advanced Test Automation Practices workshop
 
-[![CircleCI](https://circleci.com/gh/serenity-bdd/advanced-bdd-test-automation.svg?style=svg)](https://circleci.com/gh/serenity-bdd/advanced-bdd-test-automation)
+[![CircleCI](https://circleci.com/gh/serenity-dojo/advanced-bdd-test-automation.svg?style=svg)](https://circleci.com/gh/serenity-bdd/advanced-bdd-test-automation)
 
 In each exercise, you will experiment with one aspect or technique of advanced test automation using Cucumber and Serenity BDD.
 You will first see a working scenario which illustrates the approach. 
@@ -371,9 +371,3 @@ Add a scenario where the user specifies a different daparture date:
     When he views trips between "London Bridge" and "Canary Wharf"
     Then he should see a journey option for "Jubilee line to Canary Wharf"
 ```
-
-
-
-## Part 2 - The Screenplay Pattern
-
-COMING SOON!
