@@ -1,4 +1,4 @@
-package starter;
+package net.serenitybdd.exercises.lean.acceptancetests;
 
 import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
