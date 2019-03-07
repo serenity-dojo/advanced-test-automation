@@ -29,6 +29,7 @@ public class PlanAJourney extends UIInteractionSteps {
     private void selectStation(By stationField, String station) {
         $(stationField).click();
         $(stationField).sendKeys(station);
+        waitForRenderedElements(SUGGESTED_STOPS);
         $(SUGGESTED_STOPS).click();
     }
 
