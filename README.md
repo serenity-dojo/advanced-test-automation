@@ -8,6 +8,6 @@ Then you will need to implement another similar scenario to put the approach int
 The tutorial will guide you through one possible solution, though there are others.
 
 There are two variations of the tutorial:
-  * Lean Page Objects and Action Classes (check out the _action_classes-start_ branch)
-  * The Screenplay Pattern (check out the _screenplay-start_ branch)
+  * Lean Page Objects and Action Classes [check out the _action_classes-start_ branch](https://github.com/serenity-dojo/advanced-test-automation/tree/action-classes-start)
+  * The Screenplay Pattern [check out the _screenplay-start_ branch](https://github.com/serenity-dojo/advanced-test-automation/tree/screenplay-start)
   
