@@ -137,9 +137,7 @@
                     <systemPropertyVariables>
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
                     </systemPropertyVariables>
-                    <parallel>classes</parallel>
-                    <threadCount>${parallel.tests}</threadCount>
-                    <forkCount>${parallel.tests}</forkCount>
+
                 </configuration>
                 <executions>
                     <execution>
@@ -178,4 +176,36 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>parallel</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <version>2.22.1</version>
+                        <configuration>
+                            <includes>
+                                <include>**/acceptancetests/*.java</include>
+                            </includes>
+                            <systemPropertyVariables>
+                                <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
+                            </systemPropertyVariables>
+                            <parallel>classes</parallel>
+                            <threadCount>${parallel.tests}</threadCount>
+                            <forkCount>${parallel.tests}</forkCount>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                    <goal>verify</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
