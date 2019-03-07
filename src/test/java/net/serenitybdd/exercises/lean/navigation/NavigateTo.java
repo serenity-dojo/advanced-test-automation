@@ -9,14 +9,6 @@ public class NavigateTo extends UIInteractionSteps {
 
     TFLHomePage tflHomePage;
 
-    @Step("Navigate to TFL home page")
-    public void toTFLHomePage() {
-        tflHomePage.open();
-        findAll(TFLHomePage.COOKIE_BUTTON).stream().findFirst().ifPresent(
-                WebElementFacade::click
-        );
-    }
-
     @Step("Navigate to the '{0}' section")
     public void toSection(String sectionName) {
         tflHomePage.open();

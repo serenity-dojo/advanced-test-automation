@@ -1,3 +1,4 @@
+@pending
 Feature:  Plan a journey
 
   Scenario: Should see the fastest route between two stations
