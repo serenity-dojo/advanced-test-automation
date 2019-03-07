@@ -195,6 +195,7 @@ public class PlanAJourney extends UIInteractionSteps {
     public PlanAJourney from(String departure) {
         $(FROM).click();
         $(FROM).sendKeys(departure);
+        waitForRenderedElements(SUGGESTED_STOPS);
         $(SUGGESTED_STOPS).click();
         return this;
     }
@@ -203,6 +204,7 @@ public class PlanAJourney extends UIInteractionSteps {
     public void to(String destination) {
         $(TO).click();
         $(TO).sendKeys(destination);
+        waitForRenderedElements(SUGGESTED_STOPS);
         $(SUGGESTED_STOPS).click();
         
         $(PLAN_MY_JOURNEY).click();
@@ -232,6 +234,7 @@ public class PlanAJourney extends UIInteractionSteps {
     private void selectStation(By stationField, String station) {
         $(stationField).click();
         $(stationField).sendKeys(station);
+        waitForRenderedElements(SUGGESTED_STOPS);
         $(SUGGESTED_STOPS).click();
     }
 }
