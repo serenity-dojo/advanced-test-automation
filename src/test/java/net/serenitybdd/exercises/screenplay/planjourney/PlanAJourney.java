@@ -1,6 +1,5 @@
 package net.serenitybdd.exercises.screenplay.planjourney;
 
-import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
@@ -12,12 +11,12 @@ import static net.serenitybdd.exercises.screenplay.planjourney.JourneyResultList
 import static net.serenitybdd.exercises.screenplay.planjourney.PlanAJourneyForm.PLAN_MY_JOURNEY;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
-public class PlanAJourney implements Task {
+public class PlanAJourney implements Task, ToDestination {
 
     private String departure;
     private String destination;
 
-    public PlanAJourney(String departure, String destination) {
+    PlanAJourney(String departure, String destination) {
         this.departure = departure;
         this.destination = destination;
     }
@@ -32,19 +31,11 @@ public class PlanAJourney implements Task {
         );
     }
 
-    public static PlanAJourneyBuilder from(String departure) {
-        return new PlanAJourneyBuilder(departure);
+    public static ToDestination from(String departure) {
+        return new PlanAJourney(departure, null);
     }
 
-    public static class PlanAJourneyBuilder {
-        private String departure;
-
-        PlanAJourneyBuilder(String departure) {
-            this.departure = departure;
-        }
-
     public Performable to(String destination) {
-            return new PlanAJourney(departure, destination);
-        }
+        return new PlanAJourney(departure, destination);
     }
 }

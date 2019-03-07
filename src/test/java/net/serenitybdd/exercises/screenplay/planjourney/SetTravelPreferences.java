@@ -14,9 +14,13 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 
 public class SetTravelPreferences implements Performable {
 
+    public static Performable toTravelBy(List<String> travelModes) {
+        return new SetTravelPreferences(travelModes);
+    }
+
     private List<String> travelModes;
 
-    public SetTravelPreferences(List<String> travelModes) {
+    private SetTravelPreferences(List<String> travelModes) {
         this.travelModes = travelModes;
     }
 
@@ -27,23 +31,9 @@ public class SetTravelPreferences implements Performable {
                 WaitUntil.the(PLAN_MY_JOURNEY_BUTTON, isVisible()),
                 Click.on(DESELECT_ALL),
 
-                selectEachTravelModeIn(travelModes),
+                SelectEachTravelMode.in(travelModes),
 
                 Click.on(HIDE_PREFERENCES)
         );
     }
-
-    private Performable selectEachTravelModeIn(List<String> travelModes) {
-        List<Performable> selectTravelModes = travelModes.stream()
-                .map( travelMode -> Click.on(travelOptionFor(travelMode)))
-                .collect(Collectors.toList());
-
-        return Task.where("Select travel modes: " + travelModes,
-                selectTravelModes.toArray(new Performable[]{}));
-    }
-
-    public static Performable toTravelBy(List<String> travelModes) {
-        return new SetTravelPreferences(travelModes);
-    }
-
 }

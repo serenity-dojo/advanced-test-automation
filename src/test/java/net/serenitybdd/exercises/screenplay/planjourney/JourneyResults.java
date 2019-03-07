@@ -12,10 +12,12 @@ import static net.serenitybdd.exercises.screenplay.planjourney.JourneyResultList
 
 public class JourneyResults extends UIInteractionSteps {
     public static Question<List<String>> stops() {
-        return actor -> TextContent.of(STOP_LOCATION).viewedBy(actor)
+        return Question.about("stops").answeredBy(
+                actor -> TextContent.of(STOP_LOCATION).viewedBy(actor)
                 .asList()
                 .stream()
                 .map(StringUtils::strip)
-                .collect(Collectors.toList());
+                .collect(Collectors.toList())
+        );
     }
 }

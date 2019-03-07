@@ -1,8 +1,10 @@
 package net.serenitybdd.exercises.screenplay.planjourney;
 
-import org.openqa.selenium.By;
+import net.serenitybdd.screenplay.targets.Target;
 
 class JourneyResultList {
-    static By JOURNEY_RESULTS = By.cssSelector(".journey-results");
-    static By STOP_LOCATION = By.cssSelector(".stop-location-description");
+    static Target JOURNEY_RESULTS = Target.the("Journey results list")
+                                          .locatedBy("css:.journey-results");
+    static Target STOP_LOCATION = Target.the("stop locations")
+                                        .locatedBy("css:.stop-location-description");
 }

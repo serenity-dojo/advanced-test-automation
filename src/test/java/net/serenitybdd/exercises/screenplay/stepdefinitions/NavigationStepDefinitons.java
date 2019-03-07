@@ -3,8 +3,11 @@ package net.serenitybdd.exercises.screenplay.stepdefinitions;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import net.serenitybdd.exercises.screenplay.navigation.Navigate;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import net.thucydides.core.steps.StepEventBus;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
