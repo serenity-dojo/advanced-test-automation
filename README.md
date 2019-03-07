@@ -452,6 +452,7 @@ public class SelectStation {
         return Task.where(
                 "{0} selects station #stationField",
                 Click.on(stationField),
+                WaitUntil.the(PlanAJourneyForm.SUGGESTED_STOPS, isVisible()),
                 SendKeys.of(stationName).into(stationField),
                 Click.on(PlanAJourneyForm.SUGGESTED_STOPS)
         ).with("stationField").of(stationField);
