@@ -12,7 +12,7 @@ public class SetTravelPreferences extends UIInteractionSteps {
 
     @Step("Set travel preferences to {0}")
     public void toTravelBy(List<String> travelModes) {
-
+        moveTo(EDIT_PREFERENCES);
         $(EDIT_PREFERENCES).click();
         waitFor(visibilityOfElementLocated(PLAN_MY_JOURNEY_BUTTON));
         $(DESELECT_ALL).click();
