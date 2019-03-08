@@ -1,8 +1,10 @@
 package net.serenitybdd.exercises.lean.planjourney;
 
 import net.serenitybdd.core.steps.UIInteractionSteps;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 
 import java.time.Duration;
 
@@ -11,7 +13,7 @@ import static net.serenitybdd.exercises.lean.planjourney.PlanAJourneyForm.*;
 
 public class PlanAJourney extends UIInteractionSteps {
 
-    private static final Duration WAIT_FOR_RESULTS_TIMEOUT = Duration.ofSeconds(15);
+    private static final Duration WAIT_FOR_RESULTS_TIMEOUT = Duration.ofSeconds(30);
 
     @Step("Plan a journey from {0}")
     public PlanAJourney from(String departure) {
