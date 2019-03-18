@@ -1,4 +1,4 @@
-package net.serenitybdd.exercises.screenplay.planjourney;
+package net.serenitybdd.exercises.screenplay.planjourney.travelpreferences;
 
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static net.serenitybdd.exercises.screenplay.planjourney.TravelPreferenceOptions.travelOptionFor;
+import static net.serenitybdd.exercises.screenplay.planjourney.travelpreferences.TravelPreferenceOptions.travelOptionFor;
 
 class SelectEachTravelMode {
     static Performable in(List<String> travelModes) {

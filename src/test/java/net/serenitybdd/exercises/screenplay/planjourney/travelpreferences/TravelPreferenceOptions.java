@@ -1,4 +1,4 @@
-package net.serenitybdd.exercises.screenplay.planjourney;
+package net.serenitybdd.exercises.screenplay.planjourney.travelpreferences;
 
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
@@ -10,7 +10,9 @@ class TravelPreferenceOptions {
     static Target PLAN_MY_JOURNEY_BUTTON = Target.the("Plan my journey button")
                                                  .locatedBy("css:#more-journey-options .plan-journey-button");
 
+    static Target MAXIMUM_WALKING_TIME = Target.the("Maximum walking time").located(By.name("MaxWalkingMinutes"));
+
     static By travelOptionFor(String travelOption) {
-        return By.xpath(String.format("//label[.='%s']", travelOption));
+        return By.xpath(String.format("//label[.='%s']", travelOption.trim()));
     }
 }

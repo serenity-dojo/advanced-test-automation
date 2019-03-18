@@ -27,7 +27,7 @@ public class PlanAJourney implements Task, ToDestination {
                 SelectStation.from(departure),
                 SelectStation.to(destination),
                 Click.on(PLAN_MY_JOURNEY),
-                WaitUntil.the(JOURNEY_RESULTS, isVisible())
+                WaitUntil.the(JOURNEY_RESULTS, isVisible()).forNoMoreThan(60).seconds()
         );
     }
 

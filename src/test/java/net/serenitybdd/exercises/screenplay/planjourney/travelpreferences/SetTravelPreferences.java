@@ -1,15 +1,13 @@
-package net.serenitybdd.exercises.screenplay.planjourney;
+package net.serenitybdd.exercises.screenplay.planjourney.travelpreferences;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
-import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
-import static net.serenitybdd.exercises.screenplay.planjourney.TravelPreferenceOptions.*;
+import static net.serenitybdd.exercises.screenplay.planjourney.travelpreferences.TravelPreferenceOptions.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class SetTravelPreferences implements Performable {
